@@ -1,0 +1,22 @@
+%h1 show_message
+%p#notice= notice
+
+%p
+  %b Name:
+  = @resource.name
+%p
+  %b User:
+  = @resource.user_id
+%p
+  %b Telephone:
+  = @resource.telephone
+%p
+  %b Email:
+  = @resource.email
+%p
+  %b Message:
+  = @resource.message
+
+= link_to 'Edit', edit_messagestoadministrator_path(@resource)
+\@resource
+= link_to 'Back', messagestoadministrators_path

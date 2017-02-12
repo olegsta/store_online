@@ -1,0 +1,23 @@
+
+
+
+  <%= render "line_items/line_item"%>
+
+
+
+  Total price:
+  <dt class="total_cell"> 
+    <%= all_total_price %>
+  </dt>
+
+
+
+
+  <dt>
+<%= ui_button 'destroy',  t(:Delete), cart_path(@cart), method: :delete, :data => { :confirm => 'Are you sure?' } %>
+
+<% if @cart.present? %>
+<%= ui_button 'add',  t(:add), new_order_path %> 
+<% end %>
+<%= ui_button 'back',  t(:back), :back %>
+</dt>

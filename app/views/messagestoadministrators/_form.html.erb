@@ -1,0 +1,12 @@
+<%= bootstrap_form_for @resource, method: :put do |f| %>
+  <%if user_signed_in?%>
+  
+    <%= f.text_field :email, value: "#{current_user.email}", size: "40"%>
+  <%else%>
+    <%= f.text_field :email, size: "40"%>
+    <%= f.text_field :telephone, size: "40"%>
+  <%end%>
+    <%= f.text_field :name,label: "Title", size: "40"%>
+    <%= f.text_field :message, size: "39x5", class: "message", id: "message"%>
+    <%= f.submit label: "Create message"%>
+<%end%>

@@ -1,0 +1,33 @@
+<% provide(:title, 'Edit info') %>
+
+
+<div class="col-md-2">
+  <%=ui_button 'back',  t(:back), @info%>
+  <%=ui_button 'show',  t(:show), infos_path%>
+</div>
+
+<div class="col-md-8">
+  <div class="bs-example" data-example-id="striped-table">
+    <table class="table table-striped">
+	  <tbody>
+	    <td> <%= render 'form' %> 
+	    </td>
+	  </tbody>
+   <tbody>
+  </div>
+</div>
+
+<div class="col-md-2">
+
+
+</div>
+
+
+
+
+
+
+
+
+
+

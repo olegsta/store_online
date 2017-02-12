@@ -1,0 +1,526 @@
+/* main styles */
+/* line 6, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+body {
+  margin: 0;
+  padding: 0;
+  background: #BBD9EE;
+  color: #000;
+  font-family: tahoma,arial,sans-serif;
+  font-size: 11px;
+}
+
+/* line 15, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+right-column
+form {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 20, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+img {
+  border: none;
+}
+
+/* line 21, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+a {
+  color: #060606;
+  text-decoration: none;
+}
+
+/* line 22, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 23, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+input {
+  vertical-align: middle;
+}
+
+/* line 24, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+.floatleft {
+  float: left !important;
+}
+
+/* line 25, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+.floatright {
+  float: right !important;
+}
+
+/* line 26, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+.clear {
+  clear: both !important;
+}
+
+/* line 27, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+.bold {
+  font-weight: bold !important;
+}
+
+/* line 28, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+.normal {
+  font-weight: normal !important;
+}
+
+/* line 29, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+.block {
+  display: block !important;
+}
+
+/* line 30, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+input.text,
+select,
+textarea {
+  font-family: arial,sans-serif;
+  color: #333;
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+/* line 38, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+input.text {
+  padding: 1px 0 0 4px;
+  height: 14px;
+  font-weight: normal;
+}
+
+/* main container */
+/* line 44, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+#main {
+  width: 992px;
+  margin: 0 auto;
+}
+
+/* header */
+/* line 49, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+#header {
+  position: relative;
+  width: 992px;
+  height: 106px;
+  background: url(/images/admin/bg-header.gif) no-repeat left bottom;
+}
+
+/* site logo */
+/* line 56, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+a.logo {
+  position: absolute;
+  top: 5px;
+  left: 20px;
+}
+
+/* header tabs */
+/* line 63, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+#top-navigation {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 71, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+#top-navigation li {
+  float: left;
+  margin: 0 3px 0 0;
+  height: 34px;
+  background: url(/assets/images/admin/tab.gif) repeat-x top;
+}
+
+/* line 77, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+#top-navigation li a {
+  float: left;
+  display: block;
+  height: 20px;
+  line-height: 19px;
+  color: #606060;
+  padding: 4px 0 0 0;
+}
+
+/* line 85, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+#top-navigation li span {
+  float: left;
+  background: url(/assets/admin/tab-left.gif) no-repeat left top;
+}
+
+/* line 89, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+#top-navigation li span span {
+  background: url(/assets/admin/tab-right.gif) no-repeat right top;
+  padding: 7px 10px 0 10px;
+}
+
+/* line 93, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+#top-navigation li.active {
+  padding: 0;
+  height: 34px;
+  background: url(/assets/admin/tab-active.gif) repeat-x top;
+  margin-right: 2px;
+}
+
+/* line 99, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+#top-navigation li.active span {
+  background: url(/assets/admin/tab-active-left.gif) no-repeat left top;
+  height: 34px;
+}
+
+/* line 103, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+#top-navigation li.active span span {
+  background: url(/assets/admin/tab-active-right.gif) no-repeat right top;
+  height: 23px;
+  padding: 11px 10px 0 10px;
+  line-height: 19px;
+  color: #606060;
+}
+
+/* middle */
+/* line 112, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+#middle {
+  float: left;
+  width: 967px;
+  background: url(/assets/admin/bg-middle.gif) repeat-y left;
+  padding: 0 13px 0 12px;
+}
+
+/* left column */
+/* line 119, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+#left-column {
+  float: left;
+  padding: 12px 16px 0 13px;
+  padding-bottom: 7px;
+  width: 190px;
+}
+
+/* center column */
+/* line 127, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+#center-column {
+  float: left;
+  margin: 25px;
+  width: 674px;
+  background: url(/assets/admin/bg-center-column.jpg) no-repeat left top;
+  min-height: 584px;
+  padding: 12px 16px 0 13px;
+}
+
+/* line 135, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+* html #center-column {
+  height: 584px;
+}
+
+/* footer */
+/* line 138, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+#footer {
+  float: left;
+  width: 100%;
+  background: url(/assets/admin/bg-footer.gif) no-repeat;
+  height: 15px;
+}
+
+/* left column styles */
+/* line 146, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+#left-column a {
+  color: #3E3E3E;
+}
+
+/* line 147, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+#left-column h3 {
+  font-size: 11px;
+  margin: 0;
+  color: #fff;
+  background: url(/assets/admin/bg-left-header.gif) no-repeat left top;
+  height: 25px;
+  line-height: 23px;
+  padding: 0 0 0 9px;
+}
+
+/* line 156, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+ul.nav {
+  margin: 0 0 11px 0;
+  border-bottom: 2px solid #FF9600;
+  background: #ECEFE7;
+  list-style: none;
+  padding: 0 2px;
+}
+
+/* line 163, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+ul.nav li {
+  padding: 4px 4px 6px 5px;
+  background: url(/assets/admin/bg-dotted.gif) repeat-x bottom;
+}
+
+/* line 167, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+ul.nav a {
+  padding: 0 0 0 12px;
+  background: url(/assets/admin/arrow.gif) no-repeat 0 4px;
+}
+
+/* line 171, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+ul.nav a:hover {
+  font-weight: bold;
+}
+
+/* line 174, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+ul.nav li.last {
+  background: none;
+}
+
+/* line 176, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+#left-column .link {
+  display: block;
+  width: 142px;
+  height: 25px;
+  background: url(/assets/admin/bg-left-link.gif);
+  margin: 0 0 4px 0;
+  font-weight: bold;
+  padding: 0 0 0 9px;
+  line-height: 25px;
+  color: #60635A;
+}
+
+/* center column styles */
+/* line 189, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+.top-bar {
+  float: left;
+  width: 603px;
+  border-left: 2px solid #f70;
+  padding: 0 0 0 9px;
+  margin: 0 0 4px 0;
+}
+
+/* text page header */
+/* line 197, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+.top-bar h1 {
+  font: 20px/21px verdana,sans-serif;
+  color: #43729F;
+  margin: 0 0 4px 0;
+}
+
+/* orange button */
+/* line 203, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+.top-bar a.button {
+  float: right;
+  display: block;
+  width: 75px;
+  height: 35px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 27px;
+  background: url(/assets/admin/bg-orange-button.gif) no-repeat;
+}
+
+/* bar with select */
+/* line 217, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+.select-bar {
+  clear: both;
+  border-top: 2px solid #f70;
+  border-bottom: 2px solid #f70;
+  padding: 5px 0 3px 0;
+  margin: 0 0 17px 0;
+}
+
+/* line 224, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+.select-bar select {
+  width: 145px;
+  margin: 0 2px;
+}
+
+/* table container */
+/* line 227, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+div.table {
+  float: left;
+  position: relative;
+  width: 614px;
+  margin: 0 0 37px 0;
+}
+
+/* line 233, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+table.listing {
+  border-bottom: 1px solid #9097A9;
+  width: 613px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #9097A9;
+}
+
+/* line 240, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+table.listing th {
+  border-top: 0 !important;
+}
+
+/* line 243, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+table.listing th.full {
+  border-left: 0;
+  border-right: 0 !important;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+/* line 244, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+div.table img.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 249, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+div.table img.right {
+  position: absolute;
+  top: 0;
+  right: 1px;
+}
+
+/* table styles */
+/* line 255, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+table.listing td,
+table.listing th {
+  border: 1px solid #fff;
+  text-align: center;
+}
+
+/* line 260, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+table.listing th {
+  background: #9097A9;
+  color: #fff;
+  padding: 5px;
+}
+
+/* line 265, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+table.listing td {
+  background: #D8D8D8;
+  color: #000;
+  padding: 3px 5px;
+}
+
+/* line 270, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+table.listing .bg td {
+  background: #ECECEC;
+}
+
+/* line 273, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+table.listing .white td {
+  background: #fff;
+}
+
+/* line 276, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+table.listing .first {
+  border-left: 0px solid #9097A9;
+  text-align: left;
+}
+
+/* line 277, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+table.listing .last {
+  border-right: 0px solid #9097A9;
+}
+
+/* line 279, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+table.listing th.first {
+  background: #9097A9 url(/assets/admin/bg-th-left.gif) no-repeat left top;
+  border-left: 0;
+}
+
+/* line 280, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+table.listing th.last {
+  background: #9097A9 url(/assets/admin/bg-th-right.gif) no-repeat right top;
+  border-right: 0;
+}
+
+/* line 282, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+table.listing .style1 {
+  font-weight: bold;
+  color: #FF7A00;
+}
+
+/* line 283, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+table.listing .style2 {
+  font-weight: bold;
+  padding-left: 16px;
+}
+
+/* line 284, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+table.listing .style3 {
+  padding-left: 25px;
+}
+
+/* line 285, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+table.listing .style4 {
+  padding-left: 35px;
+}
+
+/* line 286, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+table.form .last {
+  padding: 1px 0 1px 5px;
+  text-align: left;
+}
+
+/* line 287, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+table.form th,
+table.form td {
+  padding-left: 10px;
+}
+
+/* line 289, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+table.form input.text {
+  width: 262px;
+}
+
+/* table select */
+/* line 292, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+div.table .select {
+  float: right;
+  margin: 2px 1px 0 0;
+  width: 176px;
+  height: 25px;
+  background: #9097A9 url(/assets/admin/bg-select.gif);
+  color: #fff;
+}
+
+/* line 300, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+div.table .select strong {
+  float: left;
+  padding: 5px 0 0 5px;
+}
+
+/* line 304, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+div.table .select select {
+  float: right;
+  width: 78px;
+  margin: 2px 3px 0 0;
+  text-align: right;
+}
+
+/* right column header */
+/* line 312, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+#right-column .h {
+  float: left;
+  background: #7E878A;
+  border: 1px solid #B8B8B8;
+  border-bottom: 0;
+  padding: 3px 10px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* right column box */
+/* line 322, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+#right-column .box {
+  float: left;
+  width: 121px;
+  padding: 5px;
+  border: 1px solid #B8B8B8;
+  background: #EBEBEB;
+  margin: 0 0 15px 0;
+}
+
+/* right column buttons */
+/* line 332, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+.buttons {
+  clear: both;
+  text-align: center;
+  padding: 30px 0 15px 0;
+}
+
+/* line 337, /home/vagrant/shop/app/assets/stylesheets/admin/admins.scss */
+.buttons input {
+  margin: 0 0 6px 0;
+}

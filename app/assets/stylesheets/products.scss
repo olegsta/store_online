@@ -1,0 +1,28 @@
+// Place all the styles related to the Products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "store";
+
+.title {margin-bottom: 10px;
+    }
+.title b{margin-left: 66px;
+    }
+
+
+.description {margin-bottom: 10px;}
+.description b{margin-left: 26px;  
+    }
+
+.full_description {margin-bottom: 10px;}
+
+
+.price {margin-bottom: 10px;}
+.price b{margin-left: 61px;  
+    }
+
+.category b{margin-left: 40px;  
+    }
+
+.uploaded_file b{margin-left: 55px;  
+    }

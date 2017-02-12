@@ -1,0 +1,40 @@
+
+<table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Quantity</th>
+          <th>Price</th>
+           <th>Total price</th>
+           <th>Quantity</th>
+            <th></th>
+        </tr>
+      </thead>
+
+
+ <% @cart.line_items.each do |line_item| %>
+      <tbody>
+        <tr id="con">
+      <%unless line_item.product.nil?%>
+          <td><%= line_item.product.title %></td>
+          <td class="count_in_<%=line_item.id%>">
+            <%= render partial: "line_items/line_quantity", locals: {line_item: line_item} %>
+          </td>
+
+          <td><%= line_item.product.price %></td>
+          
+          <td class="count_price_<%=line_item.id%>">
+            <%= number_to_currency(line_item.total_price) %>
+          </td>
+          
+          <td><%= ui_button "add", "increase", increase_line_item_path(id: line_item.id),remote: true %>
+            <%= ui_button "minus", "decrease", decrease_line_item_path(id: line_item.id), remote: true %></td>
+
+           <td> <%#= link_to 'Delete', line_item_path(line_item), method: :delete, :data => { :confirm => 'Are you sure?' } %> <td> 
+
+        </tr>
+      </tbody>
+<% end %>
+<% end %>
+
+   </table> 

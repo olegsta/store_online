@@ -1,0 +1,29 @@
+%DOCTYPE
+%html
+= render partial: "shared/java"
+= render partial: "shared/down"
+
+%head
+  =insert_extra_headers
+  = render partial: "shared/navbar" 
+  %p.notice=notice
+  %p.notice=alert
+.body 
+  =browser.name 
+  =browser.version 
+  =browser.firefox?
+
+  .main_header.clearfix
+
+
+    #buttons
+      -if signed_in?
+        = link_to 'Add Film', new_film_path
+        = link_to 'Add Actor', new_actor_path
+
+
+
+   
+
+  = yield
+

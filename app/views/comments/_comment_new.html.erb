@@ -1,0 +1,5 @@
+
+<%if @commentable.to_s==@posting.to_s%>
+  <%= ui_button 'edit',  t(:add_comment), new_posting_comment_path(@commentable),remote: true %>       
+<%elsif @commentable.to_s==@film.to_s%>  <%= ui_button 'edit',  t(:add_comment), new_film_comment_path(@commentable), remote: true %>       
+<%end%>

@@ -1,0 +1,50 @@
+
+%div{:class=>"row"}
+  = render "store/modal_for_cart"
+  -if @first_product .present?  
+    %div{:class=>"col-md-6"}     
+      %p{:class=>"tovar"}
+        = @first_product.title.capitalize
+      %p{:class=>"link_different"}
+
+        = ui_button 'back',  t(:back), products_path
+        -if @first_product.present? && user_signed_in?
+          -if can_manage(current_user.products, @first_product, Product)
+            = ui_button 'edit',  t(:edit), edit_product_path(@first_product), data: { modal: true }  
+            = ui_button 'delete',  t(:delete), product_path(@first_product), method: :delete
+
+      %p
+        =  link_to image_tag(@first_product.uploaded_file.url, size: "400x300"), product_path(@first_product)
+      
+      %div{:class=>"like_dislike_id"}
+                
+        =render partial: "voices/like_dislike", locals: {resourse_number: @first_product, name_controller: Product} 
+                             
+      %div{:class=>"row"}
+
+
+        %div{:class=>"col-md-5"} 
+          %p{:class=>"price_show"}
+            Price:
+            = @first_product.price
+        %div{:class=>"col-md-5"}     
+  
+          
+    %div{:class=>"col-md-6"}     
+      %p
+        %b Description:
+        -if params[:action]=='show'   
+          =@first_product.description
+          = render partial: "products/modal_of_description"    
+        -else  
+          = @first_product.description
+          = render partial: "products/modal_of_description"  
+         
+
+        %p{:class=>"buy_product"}
+        
+        = button_to 'buy', line_items_path(product_id: @first_product.id),remote: true, class: "btn btn-success"  
+       
+
+  -else
+    =image_tag("/assets/error.gif", width: '300', height: '200', alt: 'Site Logo', class: "logo") 

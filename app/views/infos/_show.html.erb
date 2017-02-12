@@ -1,0 +1,110 @@
+<div class="col-md-2">
+
+</div>
+
+<div class="col-md-8">
+    <div class="bs-example" data-example-id="striped-table">
+
+    <table class="table table-striped">
+    <% present(@info) do |info_presenter| %>
+    <%cache info_presenter do%>
+    <tbody>
+      <td><%= info_presenter.avatar %></td>
+      <td><%= info_presenter.name %></td>
+    </tbody>
+   <tbody>
+ <% if send_message(@info)%>
+   <td><%#= link_to 'Send message', new_message_path(user_to: @info) %> 
+   <% end %> 
+<% if user_signed_in? %>
+<% if can_manage_has_one(current_user.info, @info, Info)%>
+ <%= link_to 'Edit', edit_info_path(@info) %> 
+   <%= link_to 'Back', infos_path %> 
+ </td>
+<% end %>
+<% end %>
+ </tbody>
+
+
+    <tbody>
+      
+      <td>Username:</td>
+      <td><%= info_presenter.username %>
+    </tbody>
+    <tbody>
+    <td>Member Since: </td>
+      <td><%= @info.created_at.strftime("%B %e %Y") %>
+    </td>
+     </tbody> 
+
+
+
+      <tbody> <td>Website:  </td>
+      <td><%= markdown(info_presenter.website) %>
+    </tbody>
+
+
+      <tbody>
+      <td>User: </td>
+      <td> <%= @info.user.email %> </td>
+    </tbody>
+
+
+     <tbody> 
+      <td>Telephone: 
+      </td>
+      <td><%= info_presenter.telephone %>
+    </tbody>
+
+
+
+    <tbody> <td>Bio:  </td>
+            <td><%= markdown(info_presenter.bio) %>
+    </tbody>
+    <tbody> 
+      <td>Film created: 
+      </td>
+      <td><%= render partial: "infos/user_created", locals:{user: @user} %>
+    </tbody>
+
+    <tbody>
+      <td> send_new_film: </td>
+      <td> <% if @info.send_new_film %>
+
+ <%= image_tag("stock_check-filled.png", alt: 'True', class: "true_or_false") %>
+     <% else %>
+     <%= image_tag("x_mark_pc.png", alt: 'True', class: "true_or_false") %>
+     <% end %>
+      </dt>
+            </tbody>
+                  
+
+                  <tbody>
+     <td>send_comments_to_film:  </td>
+    
+     <td>  <% if @info.send_comments_to_film %>
+     <%= image_tag("stock_check-filled.png", alt: 'True', class: "true_or_false") %>
+     <% else %>
+     <%= image_tag("x_mark_pc.png", alt: 'True', class: "true_or_false") %>
+     <% end %>
+   </td>
+    </tbody>
+
+    <tbody>
+   
+    </tbody>
+    <% end %>
+     <% end %>
+
+     </table>
+    </div>
+</div>
+
+
+
+
+
+<div class="col-md-2">
+
+
+</div>

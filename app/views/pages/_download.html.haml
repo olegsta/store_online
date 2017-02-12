@@ -1,0 +1,5 @@
+
+=form_for :download, url: pages_download_path do |f|
+  = f.label :download_file
+  = f.text_field :fileName  
+  =f.submit :download

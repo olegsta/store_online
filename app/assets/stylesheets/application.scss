@@ -1,0 +1,58 @@
+/*
+ *= require rails_bootstrap_forms
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "rails_bootstrap_forms";
+@import "comments";
+@import "store";
+
+
+
+.registration {
+	 color: black;
+}
+.text_description {
+	color: white;
+}
+.text {
+
+	color: black;
+}
+
+/*-------------------------------------------------
+MODAL
+-------------------------------------------------*/
+div .modal-body{
+	 color: black;
+}
+
+
+
+
+div.right {margin-right: 50px;}
+div .comments {font-size: 18px;}
+
+div .search_panel{margin-left: 15px;margin-bottom: 20px;}
+
+.price_show {margin-left: 109px; font-size: 20px; background-color: pink;color: red; width: 190px;text-align: center;} 
+
+
+
+
+.garage-title {
+
+    clear: both;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+
+div .link_registration a {width:400px; padding-left: 545px; margin:40px;}
+div .google {padding-top: 15px;}
+
+div .picture_cascad {margin-left: 180px;height: 200px;}
+
+div .paginate-one {padding-left: 325px; margin-top: 0px;padding-top: 0px; width: 200px;}

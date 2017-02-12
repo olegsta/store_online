@@ -1,0 +1,38 @@
+ <br clear="all">
+<!-- navigator -->
+  <div id="prod_nav">
+    <div class="row">
+      <%if @resources.present?%>
+      <% @resources.each do |product| %>
+      <% cache product do %> 
+        <div class="col-md-4">
+          <div class="title_product">
+            <%= product.title.capitalize %>
+          </div>
+          <div class="image_product">
+          <%= link_to image_tag(product.uploaded_file.url, size: "200x100"), product_path(product), remote: true %>
+          </div>
+          
+          
+          <div class="like_and_dislike">
+             <%#=render partial: "voices/like_dislike", locals: {resourse_number: product, name_controller: Product} %>
+          </div>
+          <div class="price">
+            Price: <%= product.price %>
+             
+          </div> 
+          
+        </div>
+      <% end %>
+      <% end %>
+        <li class="active">
+                <a>
+             
+                    <%= render_pagination_box(@products) %> 
+                 
+                </a>
+              </li>
+      <% end %>
+    </div>
+  </div>
+</div>      

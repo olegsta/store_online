@@ -1,0 +1,27 @@
+%p#notice= notice
+
+
+        
+
+    
+    
+= @first_product.title
+= image_tag(@first_product.uploaded_file.url, size: "280x140")
+= @first_product.price
+
+%div{:class=>"row"}
+  %div{:class=>"col-md-1"}
+  %div{:class=>"col-md-10"}
+    %div{:class=>"description_modal"}       
+    Description:
+    = @first_product.description
+     
+
+=ui_button 'edit',  t(:edit),edit_product_path(@first_product)
+
+=ui_button 'back',  t(:back),products_path
+
+=ui_button 'pdf',  t(:pdf), product_path(@first_product, format: :pdf)
+
+
+=ui_button 'print',  t(:print),:onclick=>"window.print()"

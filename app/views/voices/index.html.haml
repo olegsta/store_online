@@ -1,0 +1,19 @@
+%h1 Listing voices
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @voices.each do |voice|
+      %tr
+        %td= link_to 'Show', voice
+        %td= link_to 'Edit', edit_voice_path(voice)
+        %td= link_to 'Destroy', voice, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Voice', new_voice_path

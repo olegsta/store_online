@@ -1,0 +1,3 @@
+module InfosHelper
+  
+end

@@ -1,0 +1,25 @@
+<div class="text">
+<%= bootstrap_form_for @search, url: product_searches_path, layout: :inline, remote: true do |f| %>
+
+
+   
+    <%= f.text_field :title, placeholder: "title",size: 17  %>
+
+   
+    <%= f.text_field :min_price, placeholder: "min_price", size: 15  %>
+
+    
+    <%= f.text_field :max_price, placeholder: "max_price", size: 15  %>
+
+    <%=f.collection_select :category, Product::CATEGORY, :to_s, :titleize,  label: "Category", placeholder: "category", size: 10 %>
+
+
+    <%#= f.select :category,  options_for_select(@categories), :include_blank => true %>
+
+
+
+
+    <%= f.submit "Search" %>
+
+<% end %>
+</div>

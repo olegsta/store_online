@@ -1,0 +1,32 @@
+
+%div{:class=>"row"}
+  %div{:class=>"col-md-2"} 
+    = ui_button 'back', "Back", root_path
+
+  %div{:class=>"col-md-6"} 
+    %p
+      %b Name:
+      = @resource.name
+    %p
+      %b Adress:
+      = @resource.address
+    %p
+      %b Email:
+      = @resource.email
+    %p
+      %b Pay type:
+      = @resource.pay_type
+    %p
+      %b Total price:
+      = @resource.total_price
+    %p 
+      %b Вы заказали следующий товар:
+    %p  
+      %b Название: 
+      =@product_title
+    %p
+      %b Количество: 
+      =@quantity
+    %p
+      %b Цена: 
+      =@price

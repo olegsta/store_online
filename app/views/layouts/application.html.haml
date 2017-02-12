@@ -1,0 +1,20 @@
+%DOCTYPE
+%html
+  %head
+
+
+    %title 
+      OLegStarosvitskij - 
+      = yield(:title) || "Store online"
+
+  = render partial: "shared/down"
+  = render partial: "shared/navbar" 
+%div{:id=>"modal-holder"}
+
+
+
+%title
+  = yield(:title)
+
+
+= yield

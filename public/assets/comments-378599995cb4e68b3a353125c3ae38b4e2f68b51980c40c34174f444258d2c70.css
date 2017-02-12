@@ -1,0 +1,53 @@
+/* line 5, /home/oleg/shop/app/assets/stylesheets/comments.scss */
+#add_comment {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  border-radius: 8px;
+}
+
+/* line 9, /home/oleg/shop/app/assets/stylesheets/comments.scss */
+h1 .title {
+  font-size: 25px;
+  margin-left: 35px;
+}
+
+/* line 13, /home/oleg/shop/app/assets/stylesheets/comments.scss */
+h1.title p {
+  font-size: 15px;
+}
+
+/* line 17, /home/oleg/shop/app/assets/stylesheets/comments.scss */
+div .link_all p {
+  padding-top: 5px;
+  margin-left: 75px;
+}
+
+/* line 20, /home/oleg/shop/app/assets/stylesheets/comments.scss */
+div .field {
+  width: 300px;
+}
+
+/* line 21, /home/oleg/shop/app/assets/stylesheets/comments.scss */
+div .field_upload {
+  padding-top: 15px;
+  display: inline-block;
+  color: black;
+}
+
+/* line 23, /home/oleg/shop/app/assets/stylesheets/comments.scss */
+div .submit {
+  padding-top: 15px;
+  color: black;
+}
+
+/* line 26, /home/oleg/shop/app/assets/stylesheets/comments.scss */
+p .date {
+  padding-left: 35px;
+}
+
+/* line 29, /home/oleg/shop/app/assets/stylesheets/comments.scss */
+div .link_all_comment {
+  padding-top: 10px;
+  padding-left: 25px;
+}

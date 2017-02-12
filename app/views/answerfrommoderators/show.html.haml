@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @answerfrommoderator.user_id
+%p
+  %b Send message:
+  = @answerfrommoderator.send_message
+%p
+  %b Name:
+  = @answerfrommoderator.name
+%p
+  %b Content:
+  = @answerfrommoderator.content
+
+= link_to 'Edit', edit_answerfrommoderator_path(@answerfrommoderator)
+\|
+= link_to 'Back', answerfrommoderators_path

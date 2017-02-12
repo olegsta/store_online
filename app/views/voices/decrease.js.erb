@@ -1,0 +1,3 @@
+$(".like #like_<%= @film.id %>").html("<%= escape_javascript render 'films/upvote' %>");
+
+$(".dislike #dislike_<%= @film.id %>").html("<%= escape_javascript render 'films/downvote' %>");

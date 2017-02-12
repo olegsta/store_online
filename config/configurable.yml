@@ -1,0 +1,100 @@
+# This file controls what config variables you want to be able to allow your users
+# to set, as well as those you'll be able to access from within the application.
+# 
+# If you want to be able to access a string config[:site_title], for example:
+#   
+products_per_page:
+  name: Products per page
+  type: integer
+  default: 3
+
+
+posting_redy:
+  name: posting_redy
+  type: integer
+  default: 5
+
+comments_per_page:
+  name: comments_per_page
+  type: integer
+  default: 5
+
+info_blog:
+  name: info_blog
+  type: integer
+  default: 3
+
+blog_redy:
+  name: Sblog_redy
+  type: integer
+  default: 3
+
+password:
+  name: password
+  type: integer
+  default: 2
+
+
+registration_from:
+  name: registration_from
+  type: string
+  default: oleg@example.com 
+
+
+delay_comment_notifications:
+  name: delay_comment_notifications
+  type: integer
+  default: 8 
+
+info_blog_per_page:
+  name: info_blog_per_page
+  type: integer
+  default: 2
+
+blogs_per_page:
+  name: Site Title
+  type: integer
+  default: 3
+
+copyright:
+  name: copyright
+  type: string
+  default: oleg prin
+
+name: 
+  name: name
+  type: string
+  default: oleg internet shop
+
+slogan: 
+  name: slogan
+  type: string
+  default: magazin
+
+admin_notification_address:
+  name: admin_notification_address
+  type: text
+  default: oleg.example@gmail.com
+# 'name' is the name that appears in the edit form
+# 
+# 'type' can be 'string' for a text field, 'password' for a password field or 'text' for a text area
+#   'type' defaults to 'string'
+# 
+# 'default' is the default value to use if there's no entry in the database. Otherwise, nil will be returned
+# 
+# Some Examples:
+#   
+# site_title:
+#   name: Site Title
+#   default: My Site
+#   type: string
+#   
+# site_description:
+#   name: Description for Google
+#   default: Lots of Awesomeness Here
+#   type: text
+#   
+# secret:
+#   name: Secret Password for Accessing Secret Areas
+#   default: secret
+#   type: password

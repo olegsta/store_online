@@ -1,0 +1,2 @@
+module MessagestoadministratorsHelper
+end

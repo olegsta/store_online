@@ -1,0 +1,35 @@
+
+
+   <div class="row">
+     <div class="col-md-3">
+    </div>
+
+    <%= form_tag(admin_configurable_path, :method => :put) do -%>
+      <%- @keys.each do |key| -%>
+        <%- options = Configurable.defaults[key] -%>
+        
+    
+              <%= label_tag key, options[:name] %>
+     
+          <% if options[:type] == 'text' %>
+            
+         
+            <%= text_area_tag key, Configurable.send(key) %>
+              <%- elsif options[:type] == 'list' -%>
+            
+           
+            <%= text_area_tag key, Configurable.serialized_value(key) -%>
+         
+          <%- else -%>
+             
+          
+            <%= text_field_tag key, Configurable.send(key) %>
+              <%- end -%>
+      
+      <%- end -%>
+     
+      <%= submit_tag 'Save' %>
+    <%- end -%>
+    
+  </div>
+

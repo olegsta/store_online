@@ -1,0 +1,3 @@
+$('#myModal').modal('show');
+$('#modal-body').html("<%= escape_javascript(render @cart) %>");
+$('.count_in_cart').html("<%= escape_javascript(render 'store/count_in_cart') %>");

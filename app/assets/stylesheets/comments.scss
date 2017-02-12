@@ -1,0 +1,29 @@
+// Place all the styles related to the Comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#add_comment {padding-top: 15px;  padding-bottom: 15px; 
+    font-size: 20px;
+    border-radius: 8px;}
+
+h1 .title {font-size: 25px; margin-left: 35px;;
+  
+}
+
+h1.title p {font-size: 15px;
+  
+}
+
+div .link_all p {padding-top: 5px; margin-left: 75px;}
+
+
+div .field {width: 300px;}
+div .field_upload {padding-top: 15px; display: inline-block;
+  color: black; }
+div .submit {padding-top: 15px;color: black;}
+
+
+ p .date {padding-left: 35px;}
+
+
+div .link_all_comment {padding-top: 10px; padding-left: 25px;}

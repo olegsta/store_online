@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-md-2">
+  </div>
+
+  <%= bootstrap_form_for(admin_configurable_path, :method => :put) do %>
+    <% @keys.each do |key| %>
+      <% options = Configurable.defaults[key] %>
+
+      <% if options[:type] == 'text' %>
+       
+          <%= label_tag key, options[:name] %>
+
+          <%= text_area_tag key, Configurable.send(key), size: "50x10" %>
+      <%- elsif options[:type] == 'list' -%>
+        
+          <%= label_tag key, options[:name] %>
+          <%= text_area_tag key, Configurable.serialized_value(key), size: "50" -%>
+        
+      <%- else -%>
+          <%= label_tag key, options[:name] %>
+          <%= text_field_tag key, Configurable.send(key), size: "50" %>
+      <% end %> 
+         
+    <% end %>
+    <%= submit_tag 'Save' %>
+  <% end %>
+
+  <div class="col-md-2">
+  </div>
+</div>

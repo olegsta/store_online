@@ -1,0 +1,27 @@
+<div id="comment_create">
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-2">
+ 
+      <%if @comment_count.present?%>
+        <button type="button", class="btn btn-info">      Hide/Show Comments 
+        </button>
+      <%end%>
+      <div id="comment_hide">
+        <div class="comment_show">
+          <%= render "comments/comment" %>
+          <div class="pagination">
+            <%= render_pagination_box(@comment_count) %> 
+          </div>
+        </div>
+      </div>  
+      <div id="add_comment">
+        <%= render "comments/comment_new"%>
+      </div>
+      <div id="new45_comment">
+      </div>
+    </div>
+    </div>
+  </div>
+</div>

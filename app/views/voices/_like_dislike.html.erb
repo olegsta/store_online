@@ -1,0 +1,36 @@
+
+  <%if user_signed_in? %>
+  <%= link_to voices_increase_path(resourse_number, param1: "#{name_controller}",param2: 'true'), class: "like", method: :put, remote: true do %>
+    <button type="button" class="btn btn-info" aria-label="Left Align">
+      <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true">
+      </span>
+    </button>
+    <span id="like_<%= resourse_number.id%>">  <%=sum_voice(true, name_controller, resourse_number) %>
+    </span>
+   <% end %>
+    <%= link_to voices_decrease_path(resourse_number, param1: "#{name_controller}", param2: 'false'),  class: "dislike", method: :put, remote: true do %>
+    <button type="button" class="btn btn-info" aria-label="Left Align">
+      <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true">
+      </span>
+    </button>
+     <span id="dislike_<%= resourse_number.id %>">  <%=sum_voice(false, name_controller, resourse_number) %>
+    </span>
+  <% end %>
+  <%else%>
+    <%= link_to new_user_session_path do %>
+    <button type="button" class="btn btn-info" aria-label="Left Align">
+      <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true">
+      </span>
+    </button>
+    <span id="like_<%= resourse_number.id%>">  <%=sum_voice(true, name_controller, resourse_number) %>
+    </span>
+   <% end %>
+    <%= link_to new_user_session_path do %>
+    <button type="button" class="btn btn-info" aria-label="Left Align">
+      <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true">
+      </span>
+    </button>
+     <span id="dislike_<%= resourse_number.id %>">  <%=sum_voice(false, name_controller, resourse_number) %>
+    </span>
+  <% end %>
+  <%end%>

@@ -1,0 +1,29 @@
+%h1 Listing messagestoadministrators
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th User
+      %th Telephone
+      %th Email
+      %th Message
+      %th
+      %th
+      %th
+
+  %tbody
+    - @resources.try(:each) do |messagestoadministrator|
+      %tr
+        %td= messagestoadministrator.name
+        %td= messagestoadministrator.user_id
+        %td= messagestoadministrator.telephone
+        %td= messagestoadministrator.email
+        %td= messagestoadministrator.message
+        %td= link_to 'Show', messagestoadministrator
+        %td= link_to 'Edit', edit_messagestoadministrator_path(messagestoadministrator)
+        %td= link_to 'Destroy', messagestoadministrator, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Messagestoadministrator', new_messagestoadministrator_path

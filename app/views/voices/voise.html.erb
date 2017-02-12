@@ -1,0 +1,10 @@
+dddd
+<%=params[:param2]%>
+<%=params[:param1]%>
+<%=params[:increase_id]%>
+<%=current_user.id%>
+<%=current_user.role%>
+ 
+ <%=Voice.find_by_votable_type(params[:param1]).present?%>
+
+ <%=change_voice(params[:param2],params[:param1],params[:increase_id],current_user.id,current_user.role)%>

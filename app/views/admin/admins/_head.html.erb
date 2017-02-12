@@ -1,0 +1,71 @@
+
+      <header id="header">
+      <div class="container">
+       
+        <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse">
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+      <div class="navbar-collapse nav-main-collapse collapse">
+        <div class="container">
+        
+          <div class="search">
+      
+          <form id="searchForm" action="contact.html#" method="get">
+            <div class="input-group">
+              <input type="text" class="form-control search" name="q" id="q" placeholder="Search..." required>
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </form>
+        </div>
+
+      <nav class="nav-main mega-menu">
+          <ul class="nav nav-pills nav-main" id="mainMenu">
+            <li>
+              <% if only_admin%>
+                <%=link_to "Admin", admin_admins_path%>
+              <%end%>
+             </li>
+             <li> 
+              <%unless @resourse.present?%>
+                <%=link_to "Home", root_path %>
+              <%end%>
+            </li>
+   
+
+     
+
+            <% if user_signed_in? %>
+        
+            
+            <li>
+              <%=link_to "Setting", edit_admin_configurable_path %></li>
+            <li>
+              <%=link_to "Receive message", messagestoadministrators_path %></li>
+            <li>
+              <%=link_to "Answer", answerfrommoderators_path %>
+            </li>  
+            <li>
+              <%=link_to "Receive Order", orders_path %>
+             </li> 
+             <li>
+               <%#=link_to "Send message", new_message_path %>
+             </li> 
+         
+            <li><%= link_to 'Log out',  destroy_user_session_path, :method => :delete  %></li>
+        <% else %>
+        <li><%= link_to "Log in", new_user_session_path
+            %> 
+          </li>
+          <li><%= link_to "Sign up", new_user_registration_path
+            %> 
+          </li>
+           
+        <% end %>
+            </ul>
+            </nav>
+          </div>
+        </div>
+        </header>

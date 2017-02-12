@@ -1,0 +1,30 @@
+%h1 Editing product
+
+
+%div{:class=>"rows"}
+
+  
+   
+= bootstrap_form_for @resource, method: :put, layout: :vertical do |f|
+
+
+  = f.text_field :title, label: "title", placeholder: "title",:size => 160
+
+  = f.text_area :description, rows: 6,cols: 50
+
+  = f.text_field :price
+
+     
+  =f.collection_select :category, Product::CATEGORY, :to_s, :titleize,  label: "Category", placeholder: "category", :style => "width:70px"
+
+ 
+  =f.file_field :uploaded_file           
+
+  = f.submit 'Save'
+
+= ui_button 'back', 'Back', root_path
+
+
+= link_to 'Show', @resource 
+
+= link_to 'Back', products_path

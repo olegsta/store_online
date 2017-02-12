@@ -1,0 +1,26 @@
+
+.wrapper
+  #commentfff
+    -if @comment_count.present?
+      -@comment_count.each do |comment|
+        .comment
+          %h1{:class=>"title"}
+            =markdown(comment.content)
+          -if comment.image_comment.present?
+            =image_tag comment.image_comment.url(:preview)    
+          %div{:class=>"link_all_comment"}
+            -if signed_in?
+              -if can_manage(current_user.comments, comment, Comment)
+                %p
+                  =ui_button('edit',  t(:edit), edit_polymorphic_path([@commentable, comment]), :remote=>true)
+                  = ui_button 'delete',  t(:delete), polymorphic_path([@commentable, comment]), method: :delete, :param1 => @commentable, :remote=>true
+      
+             
+        
+        %p{:class=>"date"}
+          =t('activerecord.attributes.published_at')
+          = time_ago_in_words(comment.created_at)
+          =t('activerecord.attributes.by')
+          -if comment.user.present?
+            =link_to comment.user.email, user_show_path(user_id: comment.user.id)
+        

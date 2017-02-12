@@ -1,0 +1,3 @@
+$('.count_in_<%=@line_item.id%>').html("<%= escape_javascript(render partial: 'line_items/line_quantity', locals: {line_item: @line_item}) %>");
+$('.count_price_<%=@line_item.id%>').html("<%= @line_item.total_price %>");
+$('.total_cell').html("<%=  all_total_price%>");

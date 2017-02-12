@@ -1,0 +1,27 @@
+%h1 Listing answerfrommoderators
+
+%table
+  %thead
+    %tr
+      %th User
+      %th Send message
+      %th Name
+      %th Content
+      %th
+      %th
+      %th
+
+  %tbody
+    - @answerfrommoderators.try(:each) do |answerfrommoderator|
+      %tr
+        %td= answerfrommoderator.user_id
+        %td= answerfrommoderator.send_message
+        %td= answerfrommoderator.name
+        %td= answerfrommoderator.content
+        %td= link_to 'Show', answerfrommoderator
+        %td= link_to 'Edit', edit_answerfrommoderator_path(answerfrommoderator)
+        %td= link_to 'Destroy', answerfrommoderator, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Answerfrommoderator', new_answerfrommoderator_path

@@ -1,0 +1,70 @@
+
+<%= form_for(@resource) do |f| %>
+ 
+  <%= errors_for(@resource) %>
+
+
+<div class="col-md-6">
+    <div class="bs-example" data-example-id="striped-table">
+    <table class="table table-striped">
+
+        <tbody>
+          <td> <%= f.label :Add_photo %> </td>
+          <td> <%= f.file_field :photo %> </td>
+        </tbody>
+
+       <tbody>
+          <td> <%= f.label :name %> </td>
+          <td> <%= f.text_field :name, size: 40 %> </td>
+        </tbody>
+
+
+
+
+       <tbody>
+          <td> <%= f.label :website %> </td>
+       <td><%= f.text_field :data, size: 40 %> </td>
+        </tbody>
+
+       <tbody>
+          <td> <%= f.label :telephone %> </td>
+           <td><%= f.text_field :telephone, size: 40 %> </td>
+       </tbody>
+       
+        <tbody>
+          <td> <%= f.label :bio %> </td>
+         <td>  <%= f.text_area :bio, rows: 3, cols: 40 %> </td>
+        </tbody>
+
+ 
+
+       <tbody>
+          <td> <%= f.label :send_new_product %> </td>
+           <td><%= f.check_box :send_new_film %> </td>
+       </tbody>
+
+        <tbody>
+        <td>   <%= f.label :send_comments_to_product %></td>
+          <td> <%= f.check_box:send_comments_to_film %> </td>
+       </tbody>
+
+
+        <tbody>
+         <td> <%= f.submit %></td>
+          </table>
+ </table> 
+  </div>
+  </div>
+
+<% end %>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,98 @@
+
+ 
+       
+
+
+ <body> 
+    <div class="header">
+
+      <div class="row">
+
+
+        <div class="col-md-9"> 
+          
+           <%unless user_signed_in?%>
+          <li> <%= render "devise/registrations/new"%></li> 
+          <li><%= render "devise/sessions/new"%></li>
+          <li><%= render "devise/google"%></li>
+          <%else%>
+            <% if admin? %> 
+          <li>  <%= link_to "admin", admin_admins_path%>
+          </li>
+          <li>  
+          <%= ui_button 'destroy',  t('menu.languages.sign_out'),   destroy_user_session_path, :method => :delete  %>
+          </li>
+        <%end%>
+          <%end %>
+          <div id="site_title"><%= link_to image_tag("shop/logo.png"), root_path%></div>
+            <!-- Main Menu -->
+            <ol id="menu">
+              <li class="active_menu_item"><%= link_to 'Category', root_path %>
+                <!-- sub menu -->
+                <ol>
+                  <li><%= link_to 'All products', root_path %>
+                  </li>
+                  <li><%= link_to "Telephone", order_products_path(:mobile) %></li>
+                  <li><%= link_to "Laptop",  order_products_path(:laptop)  %></li>
+                  <li><%= link_to "Car",  order_products_path(:car) %></li>
+                </ol>
+              </li>
+              <!-- END sub menu -->
+              <li><a href="#">Product</a>
+                <!-- sub menu -->
+                <ol>
+                
+                  <% if user_signed_in? %>
+                    <li>
+                      <%= link_to 'Add product', new_product_path, data: { modal: true } %>
+                    </li>
+                  <% else %>
+                    <li><%= link_to "Add product", new_user_registration_path
+                      %> 
+                    </li>
+                  <% end %>
+                </ol>
+
+              </li>
+              <!-- END sub menu -->
+
+              <li><a href="#">Info</a>
+                <ol>
+                  <% if user_signed_in? %>
+                    <li> <%= ui_button 'info',  t(:show_info),user_show_navbar_path(current_user.id)%></li>
+                    <li><%= ui_button 'edit',  t(:edit_info), edit_info_path(current_user.id)%></li>
+                    
+                    <li><%= ui_button 'destroy',  t('menu.languages.sign_out'),   destroy_user_session_path, :method => :delete  %></li>
+                    <%else%>
+                      <%= ui_button 'info',  "show info",new_user_session_path %>
+                      <%= ui_button 'edit',  "edit info", new_user_registration_path %>
+                     <%end%>               
+                </ol>
+              </li>
+              <!-- END sub menu -->
+              <li><%= link_to "Contact", store_contact_path %></li> 
+              <li><%= link_to "Map", store_map_path %></li> 
+
+                  
+         
+         
+
+
+
+            </ol>
+          </div>
+
+        
+        
+          
+  <%# end %>
+
+        </div>
+         
+          </div>  
+           <div class="col-md-2">
+            <%if @cart.present?%>
+              <%= link_to image_tag("/assets/empty_shopping_cart.jpg", width: '72', height: '52', alt: 'Site Logo', class: "logo"), cart_path(@cart), data: { modal: true } %>
+            <%end%>
+      </div>
+    </div>

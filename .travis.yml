@@ -1,0 +1,34 @@
+language: ruby
+
+rbenv:
+  - 2.3
+
+#env:
+ # - DB=postgresql BUILD_TYPE=other
+  #- DB=mysql BUILD_TYPE=other
+  #- DB=postgresql BUILD_TYPE=cucumber
+  #- DB=mysql BUILD_TYPE=cucumber
+
+sudo: false
+cache:
+  bundler: true
+  directories:
+    - app/assets/images
+
+branches:
+  only:
+    - 'master'
+    - 'hotfix'
+    - 'develop'
+
+before_install: gem install bundler
+#bundler_args: "--deployment --without development production --with mysql postgresql --jobs 3 --retry 3"
+
+#script: "./script/ci/build.sh"
+
+notifications:
+  irc:
+    channels:
+      - secure: YvYkeTAw+5oOl/RaXVwu7JkKGNWPoFosNQRmLvJkBFbWzZ1s5LZD1u3+Qj819bT3lGzJu9pxmJg765IRYrGWmBi4mcAV3dpO6qowVdFTcorf0JsnLw3Kvkga9rrDunsRNr21KTAQqHOO5mKUzw9DtMzd52BiWuZwIj3xcl72gQI=
+    template:
+      - "%{repository_slug}#%{commit} (%{branch} - %{commit_subject}): %{message} %{build_url}"

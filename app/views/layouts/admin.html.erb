@@ -1,0 +1,26 @@
+<DOCTYPE>
+<html>
+  <head>
+     <%= favicon_link_tag "favicon.ico"%>
+    <title> 
+     
+      <%= yield(:title) || "EverPrin - create web sites"%>
+    </title>
+    <%=render "admin/admins/head"%>
+ 	 	<%= render partial: "shared/down"%>
+  	<%#= render partial: "shared/head" %>
+    <meta charset="UTF-8">
+  	<meta name='description'
+      content='<%= yield_meta_tag(:description, 'EverPrin - create web site') %>' />
+		<meta name='keywords'
+      content='<%= yield_meta_tag(:keywords, 'ruby on rails, website') %>' />
+    <meta name="author" content="Oleg Starosvitskij">
+  </head>
+
+
+	<%= yield%>
+</html>
+
+
+
+

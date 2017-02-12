@@ -1,0 +1,5 @@
+
+=form_for :upload, url: pages_upload_path do |f|
+  = f.label :upload_file
+  = f.file_field :file  
+  =f.submit :upload
